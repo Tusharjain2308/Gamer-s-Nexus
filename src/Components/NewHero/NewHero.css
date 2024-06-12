@@ -1,0 +1,107 @@
+.hero-section {
+  background: url("../../assets/Design.png") no-repeat center center;
+  background-size: cover;
+  color: var(--text-gray-900);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-container {
+  display: grid;
+  max-width: 1440px;
+  padding: 2rem 1rem;
+  margin: 0 auto;
+  gap: 2rem;
+  width: 100%;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-right: auto;
+  grid-column: span 7 / span 7;
+  text-align: center;
+}
+
+.welcome-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  font-size: 1.5rem; /* Adjust font size here */
+  color: #ed13bd;
+}
+
+.welcome-text::before,
+.welcome-text::after {
+  content: "";
+  flex-grow: 1;
+  border-bottom: 3px solid #ccc;
+  margin: 0 1rem;
+  width: 100px;
+}
+
+.welcome-text span {
+  font-size: 2rem;
+  font-weight: 300;
+  color: var(--text-gray-500);
+}
+
+.hero-title {
+  max-width: 40rem;
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.hero-title .pink {
+  color: pink;
+}
+
+.hero-title .white {
+  color: white;
+}
+
+.hero-description {
+  max-width: 40rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-gray-500);
+  text-align: center;
+}
+
+.hero-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.hero-button-explore {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.25rem;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.hero-image {
+  display: none;
+  align-self: center;
+  grid-column: span 5 / span 5;
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+}
+
+@media (min-width: 1024px) {
+  .hero-image {
+    display: flex;
+  }
+}

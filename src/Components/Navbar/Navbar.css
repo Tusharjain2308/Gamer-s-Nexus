@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Joti+One&display=swap');
+
+:root {
+  --text-gray-900: #1a202c;
+  --text-white: #ffffff;
+  --bg-primary-700: #4c51bf;
+  --bg-primary-800: #434190;
+  --ring-primary-300: #a3bffa;
+  --ring-blue-300: #bfdbfe;
+  --bg-gray-900: #0e1727;
+  --bg-gray-700: #2d3748;
+}
+
+.navbar {
+  width: 100%;
+  background: rgba(14, 23, 39, 0.9);
+  color: var(--text-white);
+  padding: 8px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-container {
+  width: 100%;
+  max-width: 1440px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.logo {
+  width: 70px;
+  margin-left: 30px;
+}
+
+.nav-links {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: 'Joti One', serif;
+}
+
+.nav-links li {
+  margin: 0 30px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.nav-links li:hover {
+  color: var(--bg-primary-700);
+}
+
+.mobile-menu {
+  display: none;
+}
+
+.mobile-menu-button {
+  background: none;
+  border: none;
+  color: var(--text-white);
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--bg-gray-900);
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links li {
+    margin: 15px 0;
+  }
+
+  .mobile-menu {
+    display: block;
+  }
+
+  .mobile-menu-button {
+    display: flex;
+    align-items: center;
+  }
+
+  .mobile-menu-button[aria-expanded="true"] + .nav-links {
+    display: flex;
+  }
+}
