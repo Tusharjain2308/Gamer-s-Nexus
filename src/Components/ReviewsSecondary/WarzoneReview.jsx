@@ -55,14 +55,14 @@ const HeroSection = () => {
           <p className="text-lg md:text-xl mb-6">An intense tactical shooter with vibrant characters and precise gunplay.</p>
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="w-full md:w-1/2 mb-4 md:mb-0">
-              <RatingStats averageRating={4.7} />
+              <RatingStats averageRating={4.3} />
             </div>
             <ul className="w-full md:w-1/2 space-y-4 md:pl-10">
-              <RatingBar rating={5} count={25} />
-              <RatingBar rating={4} count={32} />
-              <RatingBar rating={3} count={22} />
+              <RatingBar rating={5} count={20} />
+              <RatingBar rating={4} count={22} />
+              <RatingBar rating={3} count={20} />
               <RatingBar rating={2} count={11} />
-              <RatingBar rating={1} count={6} />
+              <RatingBar rating={1} count={3} />
             </ul>
           </div>
           <button className="block mx-auto mt-8 bg-blue-800 hover:bg-blue-700 text-white rounded-lg px-6 py-3 text-xl font-medium transition duration-300">Write a Review</button>

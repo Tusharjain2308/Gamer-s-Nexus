@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
-import backmain from '../../assets/backreviewmain.png';
+import backmain from '../../assets/Design.png';
+import reviewimg from '../../assets/backreviewmain.png';
 
 export default () => {
   const [state, setState] = useState(false);
@@ -19,7 +20,7 @@ export default () => {
           backgroundImage: `url(${backmain})`,
           backgroundSize: 'cover',
           top: '120px',
-          filter: 'blur(10px)',
+          filter: 'blur(2px)',
         }}
       ></div>
       <div className="relative">
@@ -49,7 +50,7 @@ export default () => {
                   </svg>
                 </p>
               </a>
-              <div className="bg-gray-700 p-6 rounded-lg">
+              <div className="p-6 rounded-lg">
                 <h1 className="text-3xl font-extrabold sm:text-4xl text-gray-100">
                   Dive into the world of gaming
                 </h1>
@@ -82,8 +83,8 @@ export default () => {
             </div>
             <div className="flex-1 hidden md:block">
               <img
-                src="https://raw.githubusercontent.com/sidiDev/remote-assets/c86a7ae02ac188442548f510b5393c04140515d7/undraw_progressive_app_m-9-ms_oftfv5.svg"
-                className="max-w-xl"
+                src={reviewimg}
+                className="max-w-xl h-auto md:h-full"
                 alt="Gaming Illustration"
               />
             </div>
