@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import logo from '../../assets/new.png';
 import './Navbar.css';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,9 +15,9 @@ const Navbar = () => {
       <div className="navbar-container">
         <img src={logo} alt="Logo" className="logo" />
         <ul className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
-          <li>Home</li>
+          <li><Link to="/">Home</Link></li>
           <li>Leaderboard</li>
-          <li>Purchase</li>
+          <li><Link to="/Reviews">Reviews</Link></li>
           <li>Contact Us</li>
         </ul>
         <div className="mobile-menu">

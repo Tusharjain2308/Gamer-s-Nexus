@@ -1,6 +1,6 @@
 import React from 'react';
 import { AlignJustify } from 'react-feather';
-import './Hero.css'; // Import your CSS file
+import './Hero.css'; 
 import gameimg from '../../assets/gta.jpg';
 import gamelogo from '../../assets/gta_logo.png';
 
@@ -51,7 +51,7 @@ const Hero = () => {
         </div>
         <div className="relative w-full lg:w-1/2 lg:px-10 flex justify-center">
           <div className="absolute left-10 top-20 h-[30%] w-[30%] bg-emerald-300 blur-[130px]"></div>
-          <img src={gamelogo} alt="" className="h-auto w-[25%] absolute top-[30%] left-10 z-10" />
+          <img src={gamelogo} alt="" className="h-auto w-[25%] absolute top-[30%] left-10 z-5" />
           <img src={gameimg} alt="" className="h-auto w-full md:w-[70%] rounded-3xl" />
         </div>
       </section>
