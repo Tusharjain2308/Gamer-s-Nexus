@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './NewHero.css';
 import imageone from '../../assets/images.png';
 
@@ -17,12 +18,12 @@ const Hero = () => {
             Stay ahead with cutting-edge game insights, reviews, and news. Join the nexus of gaming enthusiasts today!
           </p>
           <div className="hero-buttons">
-            <a 
-              href="#" 
+            <Link
+              to="/reviews"
               className="hero-button-explore inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white bg-gradient-to-r from-pink-500 to-purple-500 rounded-lg hover:from-pink-600 hover:to-purple-600 focus:outline-none focus:ring-4 focus:ring-pink-300 dark:focus:ring-pink-800 transition-all duration-300 transform hover:scale-105"
             >
               Explore More
-            </a>
+            </Link>
           </div>
         </div>
         <div className="hero-image hidden lg:mt-0 lg:col-span-5 lg:flex">

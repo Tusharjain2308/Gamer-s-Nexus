@@ -11,18 +11,20 @@ import NewHero from "./Components/NewHero/NewHero";
 import SecondaryHero from "./Components/Secondary Hero/SecondaryHero";
 import Footer from "./Components/Footer/Footer";
 import Reviews from "./Components/Reviews/Reviews";
-import SecondaryReviews from "./Components/ReviewsSecondary/ReviewsSecondary"; // Import SecondaryReviews component
+import SecondaryReviews from "./Components/ReviewsSecondary/ReviewsSecondary"; 
 import GtaReview from "./Components/ReviewsSecondary/WarzoneReview";
 import Contact from "./Components/Contact/Contact";
 import Leaderboard from "./Components/LeaderBoard/Leaderboard";
 import Leaderboardsecond from "./Components/Leaderboardsecond/Leaderboardsecond";
 
 const Layout = () => (
-  <>
+  <div className="flex flex-col min-h-screen">
     <Navbar />
-    <Outlet />
+    <main className="flex-grow">
+      <Outlet />
+    </main>
     <Footer />
-  </>
+  </div>
 );
 
 const Home = () => (
@@ -54,20 +56,17 @@ const router = createBrowserRouter([
       },
       {
         path: "Contact Us",
-        element: (
-          <>
-          <Contact/>
-          </>
-        )
+        element: <Contact />,
       },
       {
         path: "Leaderboard",
         element: (
           <>
-          <Leaderboard/>
+            <Leaderboard />
+            <Leaderboardsecond />
           </>
-        )
-      }
+        ),
+      },
     ],
   },
 ]);

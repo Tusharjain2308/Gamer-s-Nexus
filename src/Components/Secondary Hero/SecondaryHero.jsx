@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import gamingBackground from '../../assets/gaming-background.jpg';
-import game1 from '../../assets/game1.jpg';
+import render from '../../assets/render.jpg';
 import game2 from '../../assets/game2.jpg';
 import game3 from '../../assets/game3.jpg';
 import game4 from '../../assets/game4.jpg';
 
 const SecondaryHeroSection = () => {
-  const games = [game1, game2, game3, game4];
+  const games = [render, game2, game3, game4];
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handlePrev = () => {

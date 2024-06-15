@@ -21,8 +21,8 @@ const Hero = () => {
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white max-w-sm" style={{ fontFamily: '"Press Start 2P", cursive' }}>Game of <span className="text-lime-500">the Month</span></h1>
           <p className="text-gray-300 text-sm lg:text-base mt-5" style={{ fontFamily: '"Press Start 2P", cursive' }}>Experience the thrill and excitement of the most popular game this month. Join millions of players worldwide and immerse yourself in epic adventures, stunning graphics, and captivating storylines.</p>
           <div className="mt-10 h-12 flex items-center justify-start gap-3">
-            <button className="px-6 py-1.5 h-12 text-white bg-lime-500 rounded-lg hover:opacity-75 transition-all duration-300" style={{ fontFamily: '"Press Start 2P", cursive' }}>Play Now</button>
-            <button className="px-3 py-1.5 text-white rounded-lg hover:opacity-75 transition-all duration-300" style={{ fontFamily: '"Press Start 2P", cursive' }}>Learn More</button>
+            <a href="https://www.rockstargames.com/" target="_blank" rel="noopener noreferrer" className="px-6 py-1.5 h-12 text-white bg-lime-500 rounded-lg hover:opacity-75 text-align-center transition-all duration-300" style={{ fontFamily: '"Press Start 2P", cursive', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>Play Now</a>
+            <a href="https://m.imdb.com/list/ls097840768/" target="_blank" rel="noopener noreferrer" className="px-3 py-1.5 text-white rounded-lg hover:opacity-75 transition-all duration-300" style={{ fontFamily: '"Press Start 2P", cursive' }}>Learn More</a>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-3 mt-10 w-full h-auto gap-3 lg:divide-x-[1px] place-content-center">
             <div className="w-full h-20 px-5 flex flex-col items-center justify-center">

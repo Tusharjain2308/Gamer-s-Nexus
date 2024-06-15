@@ -11,18 +11,20 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="navbar" style={{ background: 'linear-gradient(to top, rgba(14, 23, 39, 0.9), rgba(0, 0, 0, 0.8))' }}>
+    <nav className="navbar">
       <div className="navbar-container">
-        <img src={logo} alt="Logo" className="logo" />
+        <Link to="/" className="logo-link">
+          <img src={logo} alt="Logo" className="logo" />
+        </Link>
         <ul className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/Leaderboard">Leaderboard</Link></li>
-          <li><Link to="/Reviews">Reviews</Link></li>
-          <li><Link to="/Contact Us">Contact Us</Link></li>
+          <li><Link to="/" onClick={() => setIsMenuOpen(false)}>Home</Link></li>
+          <li><Link to="/Leaderboard" onClick={() => setIsMenuOpen(false)}>Leaderboard</Link></li>
+          <li><Link to="/Reviews" onClick={() => setIsMenuOpen(false)}>Reviews</Link></li>
+          <li><Link to="/Contact Us" onClick={() => setIsMenuOpen(false)}>Contact Us</Link></li>
         </ul>
         <div className="mobile-menu">
           <button 
-            className="mobile-menu-button" 
+            className={`mobile-menu-button ${isMenuOpen ? 'open' : ''}`} 
             aria-label="Toggle menu" 
             aria-expanded={isMenuOpen} 
             onClick={toggleMenu}

@@ -9,6 +9,7 @@
   --ring-blue-300: #bfdbfe;
   --bg-gray-900: #0e1727;
   --bg-gray-700: #2d3748;
+  --menu-display: none; /* Default to hide menu */
 }
 
 .navbar {
@@ -20,38 +21,41 @@
   top: 0;
   left: 0;
   z-index: 10;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: 'Joti One', serif; /* Apply the font here */
+  font-family: 'Joti One', serif;
+  transition: background-color 0.3s ease;
 }
 
 .navbar-container {
-  width: 100%;
-  max-width: 1440px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 1440px;
+  margin: 0 auto;
   padding: 0 1rem;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
 }
 
 .logo {
   width: 70px;
-  margin-left: 30px;
+  margin-right: 10px;
 }
 
 .nav-links {
-  display: flex;
+  list-style: none;
   margin: 0;
   padding: 0;
-  list-style: none;
-  font-family: 'Joti One', serif; /* Apply the font here */
+  display: flex;
+  align-items: center;
 }
 
 .nav-links li {
-  margin: 0 30px;
+  margin: 0 20px;
   font-size: 16px;
-  cursor: pointer;
 }
 
 .nav-links li:hover {
@@ -67,11 +71,16 @@
   border: none;
   color: var(--text-white);
   cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.mobile-menu-button.open svg {
+  transform: rotate(180deg);
 }
 
 @media (max-width: 768px) {
   .nav-links {
-    display: none;
     position: absolute;
     top: 100%;
     left: 0;
@@ -79,6 +88,11 @@
     background: var(--bg-gray-900);
     flex-direction: column;
     align-items: center;
+    display: var(--menu-display); /* Use CSS variable here */
+    transition: opacity 0.3s ease;
+    opacity: 0; /* Default opacity */
+    pointer-events: none; /* Default to disable pointer events */
+    padding: 10px 0;
   }
 
   .nav-links li {
@@ -96,5 +110,7 @@
 
   .mobile-menu-button[aria-expanded="true"] + .nav-links {
     display: flex;
+    opacity: 1; /* Show menu */
+    pointer-events: auto; /* Enable pointer events */
   }
 }

@@ -1,6 +1,6 @@
+// Leaderboard.jsx
 import { useState, useRef } from 'react';
 import imgimg from "../../assets/leader.jpg";
-import Leaderboardsecond from '../Leaderboardsecond/Leaderboardsecond'; // Import your Leaderboard component
 
 export default function Example() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -77,7 +77,6 @@ export default function Example() {
             </div>
           </div>
         </div>
-        <Leaderboardsecond /> {/* Render the Leaderboard component */}
       </div>
     </div>
   );
