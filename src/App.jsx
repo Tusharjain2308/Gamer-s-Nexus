@@ -13,6 +13,9 @@ import Footer from "./Components/Footer/Footer";
 import Reviews from "./Components/Reviews/Reviews";
 import SecondaryReviews from "./Components/ReviewsSecondary/ReviewsSecondary"; // Import SecondaryReviews component
 import GtaReview from "./Components/ReviewsSecondary/WarzoneReview";
+import Contact from "./Components/Contact/Contact";
+import Leaderboard from "./Components/LeaderBoard/Leaderboard";
+import Leaderboardsecond from "./Components/Leaderboardsecond/Leaderboardsecond";
 
 const Layout = () => (
   <>
@@ -49,6 +52,22 @@ const router = createBrowserRouter([
           </>
         ),
       },
+      {
+        path: "Contact Us",
+        element: (
+          <>
+          <Contact/>
+          </>
+        )
+      },
+      {
+        path: "Leaderboard",
+        element: (
+          <>
+          <Leaderboard/>
+          </>
+        )
+      }
     ],
   },
 ]);

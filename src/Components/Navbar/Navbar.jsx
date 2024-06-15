@@ -11,14 +11,14 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="navbar bg-white dark:bg-gray-900">
+    <nav className="navbar" style={{ background: 'linear-gradient(to top, rgba(14, 23, 39, 0.9), rgba(0, 0, 0, 0.8))' }}>
       <div className="navbar-container">
         <img src={logo} alt="Logo" className="logo" />
         <ul className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
           <li><Link to="/">Home</Link></li>
-          <li>Leaderboard</li>
+          <li><Link to="/Leaderboard">Leaderboard</Link></li>
           <li><Link to="/Reviews">Reviews</Link></li>
-          <li>Contact Us</li>
+          <li><Link to="/Contact Us">Contact Us</Link></li>
         </ul>
         <div className="mobile-menu">
           <button 

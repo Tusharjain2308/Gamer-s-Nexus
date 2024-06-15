@@ -23,6 +23,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: 'Joti One', serif; /* Apply the font here */
 }
 
 .navbar-container {
@@ -44,7 +45,7 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  font-family: 'Joti One', serif;
+  font-family: 'Joti One', serif; /* Apply the font here */
 }
 
 .nav-links li {
