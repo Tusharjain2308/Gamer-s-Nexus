@@ -45,31 +45,29 @@ export default function Leaderboard() {
 
   return (
     <div className="bg-gray-900">
-      {/* Animated background elements */}
-      <div className="relative isolate px-6 pt-14 lg:px-8">
-        {/* Background overlay */}
+      {/* Popular Games and Products Section */}
+      <div className="relative px-6 pt-14 lg:px-8">
         <div
           className="absolute inset-0 -z-10 transform-gpu overflow-hidden bg-cover bg-center"
           style={{
-            backgroundImage: `linear-gradient(to right, #4F3BA9, #CB3283)`,
+            backgroundImage: `linear-gradient(to right, #4F3BA9, #CB3283)`, // Background gradient
           }}
           aria-hidden="true"
         >
+          {/* Background overlay */}
           <div
             className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black opacity-70"
             aria-hidden="true"
           />
         </div>
-        
+
         {/* Animated elements */}
         <div
           className={`absolute inset-x-0 ${animationToggle ? '-top-40' : '-top-[calc(100%-13rem)]'} -z-10 transform-gpu overflow-hidden blur-3xl sm:${animationToggle ? '-top-80' : 'top-[calc(100%-30rem)]'} animate-pulse`}
           aria-hidden="true"
           style={{
-            animationDuration: '2s', // Longer duration for a stronger effect
-            animationTimingFunction: 'ease-in-out', // Smooth acceleration and deceleration
-            transition: 'opacity 0.3s ease-in-out', // Transition opacity for smoother toggle
-            opacity: animationToggle ? 1 : 0, // Initial opacity based on animationToggle state
+            animationDuration: '2s', // Increase duration
+            animationTimingFunction: 'ease-in-out', // Use ease-in-out timing function
           }}
         >
           <div
@@ -80,7 +78,7 @@ export default function Leaderboard() {
             }}
           />
         </div>
-        
+
         {/* Main content */}
         <div className="mx-auto max-w-2xl sm:py-24 lg:py-48 text-white text-center">
           <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">
@@ -129,16 +127,14 @@ export default function Leaderboard() {
             </table>
           </div>
         </div>
-        
+
         {/* Additional animated background element */}
         <div
           className={`absolute inset-x-0 ${animationToggle ? 'top-[calc(100%-13rem)]' : '-top-[calc(100%-30rem)]'} -z-10 transform-gpu overflow-hidden blur-3xl sm:${animationToggle ? 'top-[calc(100%-30rem)]' : '-top-80'} animate-pulse`}
           aria-hidden="true"
           style={{
-            animationDuration: '2s', // Longer duration for a stronger effect
-            animationTimingFunction: 'ease-in-out', // Smooth acceleration and deceleration
-            transition: 'opacity 0.3s ease-in-out', // Transition opacity for smoother toggle
-            opacity: animationToggle ? 1 : 0, // Initial opacity based on animationToggle state
+            animationDuration: '2s', // Increase duration
+            animationTimingFunction: 'ease-in-out', // Use ease-in-out timing function
           }}
         >
           <div
