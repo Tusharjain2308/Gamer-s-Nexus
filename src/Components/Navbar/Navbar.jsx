@@ -1,3 +1,4 @@
+// src/Components/Navbar/Navbar.jsx
 import React, { useState } from 'react';
 import logo from '../../assets/new.png';
 import './Navbar.css';

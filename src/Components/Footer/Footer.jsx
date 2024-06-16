@@ -1,4 +1,7 @@
+// src/Components/Footer/Footer.jsx
 import React from 'react';
+import { Link } from 'react-router-dom';
+import logo from '../../assets/new.png'; // Assuming this is the correct path to your logo
 
 const Footer = () => {
   return (
@@ -7,48 +10,48 @@ const Footer = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-gray-800 to-blue-900 opacity-75"></div>
       <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8 relative z-10">
         <div className="sm:flex sm:items-center sm:justify-between">
-          <a
-            href="https://flowbite.com/"
+          <Link
+            to="/"
             className="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse"
           >
             <img
-              src="https://flowbite.com/docs/images/logo.svg"
+              src={logo}
               className="h-8"
-              alt="Flowbite Logo"
+              alt="Gamer's Nexus Logo"
             />
             <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
               Gamer's Nexus
             </span>
-          </a>
+          </Link>
           <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-100 sm:mb-0 dark:text-gray-100">
             <li>
-              <a href="#" className="hover:underline me-4 md:me-6">
+              <Link to="/" className="hover:underline me-4 md:me-6">
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="hover:underline me-4 md:me-6">
+              <Link to="/Leaderboard" className="hover:underline me-4 md:me-6">
                 Leaderboard
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="hover:underline me-4 md:me-6">
+              <Link to="/Reviews" className="hover:underline me-4 md:me-6">
                 Reviews
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="hover:underline">
+              <Link to="/Contact Us" className="hover:underline">
                 Contact Us
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
         <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
         <span className="block text-sm text-gray-100 sm:text-center dark:text-gray-100">
           © 2024{' '}
-          <a href="https://flowbite.com/" className="hover:underline">
+          <Link to="/" className="hover:underline">
             Gamer's Nexus™
-          </a>
+          </Link>
           . All Rights Reserved.
         </span>
       </div>

@@ -1,21 +1,25 @@
-import React from "react";
+// src/App.js
+import React, { useEffect } from 'react';
 import {
   RouterProvider,
   createBrowserRouter,
   Route,
   Outlet,
-} from "react-router-dom";
-import Hero from "./Components/Hero/Hero";
-import Navbar from "./Components/Navbar/Navbar";
-import NewHero from "./Components/NewHero/NewHero";
-import SecondaryHero from "./Components/Secondary Hero/SecondaryHero";
-import Footer from "./Components/Footer/Footer";
-import Reviews from "./Components/Reviews/Reviews";
-import SecondaryReviews from "./Components/ReviewsSecondary/ReviewsSecondary"; 
-import GtaReview from "./Components/ReviewsSecondary/WarzoneReview";
-import Contact from "./Components/Contact/Contact";
-import Leaderboard from "./Components/LeaderBoard/Leaderboard";
-import Leaderboardsecond from "./Components/Leaderboardsecond/Leaderboardsecond";
+  useNavigation,
+} from 'react-router-dom';
+import Hero from './Components/Hero/Hero';
+import Navbar from './Components/Navbar/Navbar';
+import NewHero from './Components/NewHero/NewHero';
+import SecondaryHero from './Components/Secondary Hero/SecondaryHero';
+import Footer from './Components/Footer/Footer';
+import Reviews from './Components/Reviews/Reviews';
+import SecondaryReviews from './Components/ReviewsSecondary/ReviewsSecondary';
+import GtaReview from './Components/ReviewsSecondary/WarzoneReview';
+import Contact from './Components/Contact/Contact';
+import Leaderboard from './Components/LeaderBoard/Leaderboard';
+import Leaderboardsecond from './Components/Leaderboardsecond/Leaderboardsecond';
+import { LoadingProvider, useLoading } from './contexts/LoadingContext';
+import LoadingSpinner from './Components/LoadingSpinner/LoadingSpinner';
 
 const Layout = () => (
   <div className="flex flex-col min-h-screen">
@@ -35,36 +39,55 @@ const Home = () => (
   </div>
 );
 
+const RouteWithLoading = ({ element }) => {
+  const navigation = useNavigation();
+  const { setLoading } = useLoading();
+
+  useEffect(() => {
+    setLoading(navigation.state === 'loading');
+  }, [navigation.state, setLoading]);
+
+  return element;
+};
+
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: <Layout />,
     children: [
       {
-        path: "/",
-        element: <Home />,
+        path: '/',
+        element: <RouteWithLoading element={<Home />} />,
       },
       {
-        path: "Reviews",
+        path: 'Reviews',
         element: (
-          <>
-            <Reviews />
-            <SecondaryReviews />
-            <GtaReview />
-          </>
+          <RouteWithLoading
+            element={
+              <>
+                <Reviews />
+                <SecondaryReviews />
+                <GtaReview />
+              </>
+            }
+          />
         ),
       },
       {
-        path: "Contact Us",
-        element: <Contact />,
+        path: 'Contact Us',
+        element: <RouteWithLoading element={<Contact />} />,
       },
       {
-        path: "Leaderboard",
+        path: 'Leaderboard',
         element: (
-          <>
-            <Leaderboard />
-            <Leaderboardsecond />
-          </>
+          <RouteWithLoading
+            element={
+              <>
+                <Leaderboard />
+                <Leaderboardsecond />
+              </>
+            }
+          />
         ),
       },
     ],
@@ -72,7 +95,12 @@ const router = createBrowserRouter([
 ]);
 
 const App = () => {
-  return <RouterProvider router={router} />;
+  return (
+    <LoadingProvider>
+      <RouterProvider router={router} />
+      <LoadingSpinner />
+    </LoadingProvider>
+  );
 };
 
 export default App;

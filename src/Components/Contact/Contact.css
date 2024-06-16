@@ -1,68 +1,82 @@
 /* Custom Font */
 body, h1, h2, h3, h4, h5, h6, p, a, input, button, textarea {
-    font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Basic Styles */
+.contact-section {
+  background-image: url('../../assets/contact1.jpg'); /* Replace with the actual path to your image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh; /* Ensure it covers the full viewport height */
+  display: flex;
+  align-items: center; /* Center the content vertically */
+  padding-top: 50px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Semi-transparent Backgrounds */
+.contact-form,
+.contact-info {
+  background-color: rgba(255, 255, 255, 0.8); /* Add a semi-transparent background for better readability */
+  padding: 2rem;
+  border-radius: 0.5rem;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s forwards ease-in-out;
+}
+
+/* Animation Delays */
+.contact-info:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.contact-info:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.contact-info:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.contact-info:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.contact-form {
+  animation-delay: 0.5s;
+}
+
+/* Fade In Up Animation */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  /* Basic Styles */
-  .contact-section {
-    padding-top: 50px;
-    transition: all 0.3s ease-in-out;
-  }
-  
+}
+
+/* Responsive Design Enhancements */
+@media (max-width: 768px) {
   .contact-info, .contact-form {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 0.5s forwards ease-in-out;
+    animation: none;
+    opacity: 1;
+    transform: none;
   }
-  
-  .contact-info:nth-child(1) {
-    animation-delay: 0.1s;
-  }
-  
-  .contact-info:nth-child(2) {
-    animation-delay: 0.2s;
-  }
-  
-  .contact-info:nth-child(3) {
-    animation-delay: 0.3s;
-  }
-  
-  .contact-info:nth-child(4) {
-    animation-delay: 0.4s;
-  }
-  
-  .contact-form {
-    animation-delay: 0.5s;
-  }
-  
-  /* Fade In Up Animation */
-  @keyframes fadeInUp {
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  /* Responsive Design Enhancements */
-  @media (max-width: 768px) {
-    .contact-info, .contact-form {
-      animation: none;
-      opacity: 1;
-      transform: none;
-    }
-  }
-  
-  /* Dark Mode Enhancements */
-  .dark .contact-section {
-    background: #1a202c;
-  }
-  
-  .dark .contact-info, .dark .contact-form {
-    background: #2d3748;
-    border-color: #2d3748;
-  }
-  
-  .dark .contact-info h2, .dark .contact-info p, .dark .contact-form label, .dark .contact-form input, .dark .contact-form textarea {
-    color: #e2e8f0;
-  }
-  
+}
+
+/* Dark Mode Enhancements */
+.dark .contact-section {
+  background: #1a202c;
+}
+
+.dark .contact-info, .dark .contact-form {
+  background: #2d3748;
+  border-color: #2d3748;
+}
+
+.dark .contact-info h2, .dark .contact-info p,
+.dark .contact-form label, .dark .contact-form input,
+.dark .contact-form textarea {
+  color: #e2e8f0;
+}
