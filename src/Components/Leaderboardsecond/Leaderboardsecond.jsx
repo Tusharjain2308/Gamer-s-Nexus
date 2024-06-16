@@ -41,6 +41,13 @@ export default function Leaderboard() {
       category: 'Battle Royale',
       price: 'Free',
     },
+    {
+      name: 'Cyberpunk 2077',
+      link: 'https://www.cyberpunk.net/',
+      color: 'Various',
+      category: 'Action RPG',
+      price: '$59.99',
+    },
   ];
 
   return (
@@ -81,7 +88,7 @@ export default function Leaderboard() {
 
         {/* Main content */}
         <div className="mx-auto max-w-2xl sm:py-24 lg:py-48 text-white text-center">
-          <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">
+          <h1 className="text-5xl font-bold tracking-tight sm:text-7xl">
             Popular Games and Products
           </h1>
           <div className="relative overflow-x-auto shadow-md sm:rounded-lg mt-8">

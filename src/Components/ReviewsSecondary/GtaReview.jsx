@@ -1,6 +1,6 @@
 import React from 'react';
-import valorantBackground from '../../assets/game1.jpg'; // Replace with your actual image path
-import { Link } from 'react-router-dom'; // Import Link from react-router-dom
+import gtaback from '../../assets/gta1.jpg'; // Replace with your actual image path
+import { Link } from 'react-router-dom';
 
 const RatingBar = ({ rating, count }) => {
   const widthPercentage = (count / 56) * 100;
@@ -49,24 +49,24 @@ const RatingStats = ({ averageRating }) => {
 const HeroSection = () => {
   return (
     <div className="relative w-full bg-gray-900 py-24 overflow-hidden min-h-screen"> {/* Increased py-24 and added min-h-screen */}
-      <img src={valorantBackground} alt="Valorant" className="absolute inset-0 object-cover w-full h-full opacity-50 z-0" />
+      <img src={gtaback} alt="Valorant" className="absolute inset-0 object-cover w-full h-full opacity-50 z-0" />
       <div className="max-w-4xl mx-auto px-6 py-16 relative z-5"> {/* Increased py-16 for inner padding */}
         <div className="bg-blue-900 bg-opacity-90 text-white rounded-lg p-10 shadow-lg text-center"> {/* Increased p-10 for inner padding */}
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 font-serif">Valorant</h1>
-          <p className="text-lg md:text-xl mb-6">An intense tactical shooter with vibrant characters and precise gunplay.</p>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 font-serif">Grand Theft Auto V</h1> {/* Changed font to serif */}
+          <p className="text-lg md:text-xl mb-6">An expansive open-world game that masterfully blends storytelling, action, and exploration with its immersive gameplay and detailed environment.</p>
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="w-full md:w-1/2 mb-4 md:mb-0">
-              <RatingStats averageRating={4.7} />
+              <RatingStats averageRating={4.2} />
             </div>
             <ul className="w-full md:w-1/2 space-y-4 md:pl-10">
-              <RatingBar rating={5} count={25} />
-              <RatingBar rating={4} count={32} />
-              <RatingBar rating={3} count={22} />
+              <RatingBar rating={5} count={20} />
+              <RatingBar rating={4} count={21} />
+              <RatingBar rating={3} count={19} />
               <RatingBar rating={2} count={11} />
-              <RatingBar rating={1} count={6} />
+              <RatingBar rating={1} count={5} />
             </ul>
           </div>
-          <Link to="https://www.google.com/search?q=review+valoramt&rlz=1C1CHBF_enIN1048IN1048&oq=review+valoramt&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIHCAEQABiABDIICAIQABgWGB4yCAgDEAAYFhgeMggIBBAAGBYYHjIICAUQABgWGB4yCAgGEAAYFhgeMggIBxAAGBYYHjIICAgQABgWGB4yCAgJEAAYFhge0gEINTI2MmoxajeoAgCwAgA&sourceid=chrome&ie=UTF-8">
+          <Link to="https://www.google.com/search?q=gta+v+review&rlz=1C1CHBF_enIN1048IN1048&oq=gta+v+review&gs_lcrp=EgZjaHJvbWUqDAgAEAAYQxiABBiKBTIMCAAQABhDGIAEGIoFMgoIARAAGLEDGIAEMgcIAhAAGIAEMgoIAxAAGLEDGIAEMgcIBBAAGIAEMgcIBRAAGIAEMgcIBhAAGIAEMgcIBxAAGIAEMgcICBAAGIAEMgcICRAAGIAE0gEIMjM3MWowajeoAgCwAgA&sourceid=chrome&ie=UTF-8">
           <button className="block mx-auto mt-8 bg-blue-800 hover:bg-blue-700 text-white rounded-lg px-6 py-3 text-xl font-medium transition duration-300">Write a Review</button>
           </Link>
         </div>

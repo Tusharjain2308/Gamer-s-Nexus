@@ -61,7 +61,7 @@ export default () => {
                 </p>
                 <div className="flex items-center gap-x-3 sm:text-sm mt-4">
                   <a
-                    href="javascript:void(0)"
+                    href="https://store.steampowered.com/reviews/"
                     className="flex items-center justify-center gap-x-1 py-3 px-5 bg-red-500 duration-150 hover:bg-red-600 active:bg-red-700 rounded-full text-white"
                   >
                     Give reviews

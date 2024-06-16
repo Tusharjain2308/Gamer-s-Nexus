@@ -1,8 +1,9 @@
-// src/Components/Footer/Footer.jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Footer.css';
 import logo from '../../assets/new1.png'; // Assuming this is the correct path to your logo
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTwitter, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 const Footer = () => {
   return (
@@ -47,8 +48,19 @@ const Footer = () => {
             </li>
           </ul>
         </div>
+        <div className="flex justify-center space-x-4 mt-4">
+          <a href="https://x.com/TusharJain2308" target="_blank" rel="noopener noreferrer" className="text-gray-100 hover:text-gray-400">
+            <FontAwesomeIcon icon={faTwitter} size="lg" />
+          </a>
+          <a href="https://www.instagram.com/tushar_jain_2308/" target="_blank" rel="noopener noreferrer" className="text-gray-100 hover:text-gray-400">
+            <FontAwesomeIcon icon={faInstagram} size="lg" />
+          </a>
+          <a href="https://www.linkedin.com/in/tushar-jain-9b4934257/" target="_blank" rel="noopener noreferrer" className="text-gray-100 hover:text-gray-400">
+            <FontAwesomeIcon icon={faLinkedin} size="lg" />
+          </a>
+        </div>
         <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-        <span className="block text-sm text-gray-100 sm:text-center dark:text-gray-100">
+        <span className="block text-md text-gray-100 sm:text-center dark:text-gray-100">
           © 2024{' '}
           <Link to="/" className="hover:underline">
             Gamer's Nexus™

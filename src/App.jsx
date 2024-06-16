@@ -14,17 +14,20 @@ import SecondaryHero from './Components/Secondary Hero/SecondaryHero';
 import Footer from './Components/Footer/Footer';
 import Reviews from './Components/Reviews/Reviews';
 import SecondaryReviews from './Components/ReviewsSecondary/ReviewsSecondary';
-import GtaReview from './Components/ReviewsSecondary/WarzoneReview';
+import WarzoneReview from './Components/ReviewsSecondary/WarzoneReview';
+import GtaReview from './Components/ReviewsSecondary/GtaReview';
 import Contact from './Components/Contact/Contact';
 import Leaderboard from './Components/LeaderBoard/Leaderboard';
 import Leaderboardsecond from './Components/Leaderboardsecond/Leaderboardsecond';
 import { LoadingProvider, useLoading } from './contexts/LoadingContext';
 import LoadingSpinner from './Components/LoadingSpinner/LoadingSpinner';
+import ScrollToTop from './Components/ScrollToTop/ScrollToTop';
 
 const Layout = () => (
   <div className="flex flex-col min-h-screen">
     <Navbar />
     <main className="flex-grow">
+      <ScrollToTop />
       <Outlet />
     </main>
     <Footer />
@@ -67,6 +70,7 @@ const router = createBrowserRouter([
               <>
                 <Reviews />
                 <SecondaryReviews />
+                <WarzoneReview />
                 <GtaReview />
               </>
             }

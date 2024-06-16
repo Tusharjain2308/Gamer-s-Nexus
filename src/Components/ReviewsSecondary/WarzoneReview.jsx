@@ -1,5 +1,6 @@
 import React from 'react';
 import valorantBackground from '../../assets/warzone1.jpg'; // Replace with your actual image path
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 
 const RatingBar = ({ rating, count }) => {
   const widthPercentage = (count / 56) * 100;
@@ -65,7 +66,9 @@ const HeroSection = () => {
               <RatingBar rating={1} count={3} />
             </ul>
           </div>
-          <button className="block mx-auto mt-8 bg-blue-800 hover:bg-blue-700 text-white rounded-lg px-6 py-3 text-xl font-medium transition duration-300">Write a Review</button>
+          <Link to="https://store.steampowered.com/reviews/">
+            <button className="block mx-auto mt-8 bg-blue-800 hover:bg-blue-700 text-white rounded-lg px-6 py-3 text-xl font-medium transition duration-300">Write a Review</button>
+          </Link>
         </div>
       </div>
     </div>
