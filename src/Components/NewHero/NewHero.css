@@ -1,3 +1,5 @@
+/* NewHero.css */
+
 .hero-section {
   background: url("../../assets/Design.png") no-repeat center center;
   background-size: cover;
@@ -6,6 +8,7 @@
   display: flex;
   align-items: center;
   transition: background-image 0.3s ease, color 0.3s ease;
+  max-width: 100%;
 }
 
 .hero-container {
@@ -100,9 +103,9 @@
 }
 
 .hero-image {
-  display: none;
   align-self: center;
   grid-column: span 5 / span 5;
+  display: flex;
 }
 
 .hero-image img {
@@ -110,8 +113,17 @@
   height: auto;
 }
 
-@media (min-width: 1024px) {
+@media (max-width: 1023px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .hero-text {
+    grid-column: span 12 / span 12;
+    margin-right: 0;
+  }
+  
   .hero-image {
-    display: flex;
+    display: none;
   }
 }

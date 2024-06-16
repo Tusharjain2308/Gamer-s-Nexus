@@ -1,11 +1,12 @@
+// NewHero.jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './NewHero.css';
 import imageone from '../../assets/images.png';
 
-const Hero = () => {
+const NewHero = () => {
   return (
-    <section className="hero-section bg-white dark:bg-gray-900">
+    <section className="hero-section overflow-x-hidden bg-white dark:bg-gray-900">
       <div className="hero-container grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
         <div className="hero-text mr-auto place-self-center lg:col-span-7">
           <div className="welcome-text">
@@ -26,10 +27,11 @@ const Hero = () => {
             </Link>
           </div>
         </div>
-        <div className="hero-image hidden lg:mt-0 lg:col-span-5 lg:flex">
+        <div className="hero-image lg:mt-0 lg:col-span-5 lg:flex">
           <img 
             src={imageone} 
             alt="mockup"
+            className="w-full h-auto"
           />
         </div>                
       </div>
@@ -37,4 +39,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default NewHero;
