@@ -12,19 +12,19 @@
 
 .hero-image img {
     width: 500px;
-    max-width: 800px; /* Adjust based on your design */
+    max-width: 800px; 
     height: auto;
 }
 
 .content {
     font-family: "Joti One", serif;
     color: #fff;    
-    max-width: 600px; /* Adjust based on your design */
+    max-width: 600px; 
     padding-left: 40px; 
 }
 
 .content h1{
-    font-size: 2.5em; /* Adjust based on your design */
+    font-size: 2.5em;
     margin-bottom: 20px;
 }
 

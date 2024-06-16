@@ -1,14 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Footer.css';
-import logo from '../../assets/new1.png'; // Assuming this is the correct path to your logo
+import logo from '../../assets/new1.png'; 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 const Footer = () => {
   return (
     <footer className="bg-white shadow dark:bg-gray-900 relative">
-      {/* Gradient overlay */}
+      
       <div className="absolute inset-0 bg-gradient-to-b from-gray-800 to-blue-900 opacity-75"></div>
       <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8 relative z-10">
         <div className="sm:flex sm:items-center sm:justify-between">

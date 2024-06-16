@@ -5,9 +5,8 @@ import imgimg from "../../assets/leader.jpg";
 
 export default function Example() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const leaderboardRef = useRef(null); // Ref for the leaderboard section
+  const leaderboardRef = useRef(null); 
 
-  // Function to scroll to the leaderboard section
   const scrollToLeaderboard = () => {
     leaderboardRef.current.scrollIntoView({ behavior: 'smooth' });
   };

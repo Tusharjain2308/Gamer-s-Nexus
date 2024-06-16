@@ -1,18 +1,17 @@
 import React from 'react';
-import gtaback from '../../assets/gta1.jpg'; // Replace with your actual image path
+import gtaback from '../../assets/gta1.jpg'; 
 import { Link } from 'react-router-dom';
 
 const RatingBar = ({ rating, count }) => {
   const widthPercentage = (count / 56) * 100;
 
-  // Determine text color based on rating value
   let ratingColorClass = 'text-white';
   if (rating >= 4) {
-    ratingColorClass = 'text-green-600'; // Adjust color based on your preference
+    ratingColorClass = 'text-green-600'; 
   } else if (rating >= 2) {
-    ratingColorClass = 'text-yellow-600'; // Adjust color based on your preference
+    ratingColorClass = 'text-yellow-600'; 
   } else {
-    ratingColorClass = 'text-red-600'; // Adjust color based on your preference
+    ratingColorClass = 'text-red-600'; 
   }
 
   return (
@@ -48,11 +47,11 @@ const RatingStats = ({ averageRating }) => {
 
 const HeroSection = () => {
   return (
-    <div className="relative w-full bg-gray-900 py-24 overflow-hidden min-h-screen"> {/* Increased py-24 and added min-h-screen */}
+    <div className="relative w-full bg-gray-900 py-24 overflow-hidden min-h-screen"> 
       <img src={gtaback} alt="Valorant" className="absolute inset-0 object-cover w-full h-full opacity-50 z-0" />
-      <div className="max-w-4xl mx-auto px-6 py-16 relative z-5"> {/* Increased py-16 for inner padding */}
-        <div className="bg-blue-900 bg-opacity-90 text-white rounded-lg p-10 shadow-lg text-center"> {/* Increased p-10 for inner padding */}
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 font-serif">Grand Theft Auto V</h1> {/* Changed font to serif */}
+      <div className="max-w-4xl mx-auto px-6 py-16 relative z-5"> 
+        <div className="bg-blue-900 bg-opacity-90 text-white rounded-lg p-10 shadow-lg text-center"> 
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 font-serif">Grand Theft Auto V</h1> 
           <p className="text-lg md:text-xl mb-6">An expansive open-world game that masterfully blends storytelling, action, and exploration with its immersive gameplay and detailed environment.</p>
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="w-full md:w-1/2 mb-4 md:mb-0">

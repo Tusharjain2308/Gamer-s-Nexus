@@ -2,7 +2,7 @@ import { useState } from 'react';
 import imgimg from "../../assets/leader.jpg"; // Replace with your image path
 
 export default function Leaderboard() {
-  const [animationToggle, setAnimationToggle] = useState(true); // State to control animation
+  const [animationToggle, setAnimationToggle] = useState(true); 
 
   // Define game links
   const games = [
@@ -52,16 +52,14 @@ export default function Leaderboard() {
 
   return (
     <div className="bg-gray-900">
-      {/* Popular Games and Products Section */}
       <div className="relative px-6 pt-14 lg:px-8">
         <div
           className="absolute inset-0 -z-10 transform-gpu overflow-hidden bg-cover bg-center"
           style={{
-            backgroundImage: `linear-gradient(to right, #4F3BA9, #CB3283)`, // Background gradient
+            backgroundImage: `linear-gradient(to right, #4F3BA9, #CB3283)`, 
           }}
           aria-hidden="true"
         >
-          {/* Background overlay */}
           <div
             className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black opacity-70"
             aria-hidden="true"
@@ -86,7 +84,6 @@ export default function Leaderboard() {
           />
         </div>
 
-        {/* Main content */}
         <div className="mx-auto max-w-2xl sm:py-24 lg:py-48 text-white text-center">
           <h1 className="text-5xl font-bold tracking-tight sm:text-7xl">
             Popular Games and Products
