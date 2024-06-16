@@ -58,7 +58,7 @@
 .mobile-menu-button {
   background: none;
   border: none;
-  color: var(--text-white);
+  color: white;
   cursor: pointer;
   display: flex;
   align-items: center;
