@@ -1,21 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Joti+One&display=swap');
-
-:root {
-  --text-gray-900: #1a202c;
-  --text-white: #ffffff;
-  --bg-primary-700: #4c51bf;
-  --bg-primary-800: #434190;
-  --ring-primary-300: #a3bffa;
-  --ring-blue-300: #bfdbfe;
-  --bg-gray-900: #0e1727;
-  --bg-gray-700: #2d3748;
-  --menu-display: none; /* Default to hide menu */
-}
+/* Navbar.css */
 
 .navbar {
   width: 100%;
   background: rgba(14, 23, 39, 0.9);
-  color: var(--text-white);
+  color: var(--text-white); /* Ensure text color is white */
   padding: 8px 0;
   position: fixed;
   top: 0;
@@ -41,7 +29,8 @@
 }
 
 .logo {
-  width: 70px;
+  height: 75px;
+  width: 75px;
   margin-right: 10px;
 }
 
@@ -51,11 +40,13 @@
   padding: 0;
   display: flex;
   align-items: center;
+  color: white;
 }
 
 .nav-links li {
   margin: 0 20px;
   font-size: 16px;
+  color: var(--text-white); /* Text color white */
 }
 
 .nav-links li:hover {
@@ -88,15 +79,23 @@
     background: var(--bg-gray-900);
     flex-direction: column;
     align-items: center;
-    display: var(--menu-display); /* Use CSS variable here */
+    display: none; /* Use display: none initially */
     transition: opacity 0.3s ease;
     opacity: 0; /* Default opacity */
     pointer-events: none; /* Default to disable pointer events */
     padding: 10px 0;
+    color: white;
+  }
+
+  .nav-links.open {
+    display: flex; /* Show menu when .open class is applied */
+    opacity: 1;
+    pointer-events: auto;
   }
 
   .nav-links li {
     margin: 15px 0;
+    color: var(--text-white); /* Text color white */
   }
 
   .mobile-menu {
@@ -108,9 +107,7 @@
     align-items: center;
   }
 
-  .mobile-menu-button[aria-expanded="true"] + .nav-links {
-    display: flex;
-    opacity: 1; /* Show menu */
-    pointer-events: auto; /* Enable pointer events */
+  .mobile-menu-button[aria-expanded="true"] svg {
+    transform: rotate(180deg);
   }
 }
